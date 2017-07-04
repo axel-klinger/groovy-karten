@@ -59,12 +59,12 @@ class Kartenspiel {
     // spielen
     10.times {
       def tisch = []
-      tisch << spieler1.spielen(tisch)
+      tisch << spieler1.spielen(tisch) // => spieler1.interaktivSpielen(tisch) -> Eingabe von Tastatur "Karte 1-x"
       tisch << spieler2.spielen(tisch)
       tisch << spieler3.spielen(tisch)
-      println tisch
+      println "Tisch: " + tisch
       def index = hoechsteKarte(tisch)
-      println index
+      println "Höchste Karte: " + index
     }
 
     println "Spieler 1: " + spieler1.hand.sort()
